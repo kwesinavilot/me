@@ -141,7 +141,7 @@ export default function Home() {
                   Favourite Quote
                 </Title>
 
-                <Blockquote color="teal" cite="~ Nelson Mandela">
+                <Blockquote fz="xl" fw={500} color="teal" cite="~ Nelson Mandela">
                   It always seems impossible until it is done.
                 </Blockquote>
 
