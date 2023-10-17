@@ -73,8 +73,8 @@ export default function Home() {
     <>
       <SEOHead
         title="Home"
-        keywords="Breathe Accra, Accra, breathe, ghana air quality, ghana clean air initiative, clean air ghana, ghana environment, ghana air pollution, ghana pollution, breatheaccra, accrabreathe, accra breathe, breathe accra, ghana, ghana air, breathe ghana, air quality in accra, air pollution in accra, how to improve air quality in accra, what causes air pollution in accra, the effects of air pollution on health, the cost of air pollution, how to reduce air pollution, air pollution solutions, air pollution awareness, air pollution prevention"
-        description="Breathe Accra ensures openly accessible hyperlocal air quality data in the Greater Accra Metropolitan Area for public awareness and influencing air pollution control decision-making."
+        keywords="andrews kwesi ankomahene, Andrews Kwesi Ankomahene, Kwesi Ankomahene, Kwesi Navilot, Navilot, Andrews Kwesi, Kwesi"
+        description="Hello, this is Andrews Kwesi Ankomahene and welcome to my website. Here, you get to hear my story and understand me better."
       />
 
       <>
