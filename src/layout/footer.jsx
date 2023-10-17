@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const useStyles = createStyles((theme) => ({
     footer: {
-        paddingTop: theme.spacing.xl * 2,
+        paddingTop: "3%",
         backgroundColor: theme.colors.main[9],
 
         [theme.fn.smallerThan('sm')]: {
@@ -21,8 +21,8 @@ const useStyles = createStyles((theme) => ({
         },
 
         [theme.fn.largerThan('md')]: {
-            paddingLeft: "10%",
-            paddingRight: "10%",
+            paddingLeft: "5%",
+            paddingRight: "5%",
         },
     },
 

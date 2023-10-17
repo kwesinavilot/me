@@ -91,8 +91,8 @@ const useStyles = createStyles((theme) => ({
         },
 
         [theme.fn.largerThan('md')]: {
-            paddingLeft: '10%',
-            paddingRight: '10%',
+            paddingLeft: '5%',
+            paddingRight: '5%',
         },
     }
 }));
