@@ -1,4 +1,4 @@
-import { createStyles, Text, Container, ActionIcon, Group, Image, SimpleGrid } from '@mantine/core';
+import { createStyles, Text, Container, Title, ActionIcon, Group, Image, SimpleGrid } from '@mantine/core';
 import { IconBrandTwitter, IconBrandYoutube, IconBrandInstagram, IconBrandFacebook } from '@tabler/icons-react';
 import Link from "next/link";
 
@@ -21,8 +21,8 @@ const useStyles = createStyles((theme) => ({
         },
 
         [theme.fn.largerThan('md')]: {
-            paddingLeft: 30,
-            paddingRight: 30,
+            paddingLeft: "10%",
+            paddingRight: "10%",
         },
     },
 
@@ -124,59 +124,18 @@ const useStyles = createStyles((theme) => ({
 
 const data = [
     {
-        title: "About",
+        title: "More of Me",
         links: [
             { label: "About", link: "/about" },
-            { label: "Team", link: "/team" },
-            { label: "Events", link: "/events" },
-            { label: "Contact Us", link: "/contact" }
-        ]
-    },
-    {
-        title: "Air Quality",
-        links: [
-            { label: "AQI At Your Location", link: '/aqi/' },
-            // { label: "By Location", link: '/aqi/districts/' }, //link: '/aqi/location/', },
-            // { label: "AQI In Your District", link: "/aqi/districts/" },
-            { label: "Historical Data", link: "/historical-data" },
-        ]
-    },
-    {
-        title: "Resources",
-        links: [
-            { label: "Newsletters", link: "/newsletters" },
-        ]
-    },
-    {
-        title: "Collaborations",
-        links: [
-            { label: "Partnerships", link: "/partnerships" },
-            { label: "Network", link: "/network" },
+            { label: "Projects", link: "/projects" },
+            { label: "Skills", link: "/skills" },
+            { label: "Contact", link: "/contact" }
         ]
     },
 ]
 
 export function Footer() {
     const { classes } = useStyles();
-
-    const groups = data.map((group) => {
-        const links = group.links.map((link, index) => (
-            <Link
-                key={index}
-                className={classes.link}
-                href={link.link}
-            >
-                {link.label}
-            </Link>
-        ));
-
-        return (
-            <div className={classes.wrapper} key={group.title}>
-                <Text className={classes.title}>{group.title}</Text>
-                {links}
-            </div>
-        );
-    });
 
     return (
         <footer className={classes.footer}>
@@ -186,16 +145,12 @@ export function Footer() {
                         href="/"
                         style={{ textDecoration: 'none' }}
                     >
-                        <Image
-                            src="/components/logo-gradient.png"
-                            width="130px"
-                            alt="Breathe Accra project logo"
-                        />
+                        <Title order={4} color='black'>Kwesi Ankomahene</Title>
                     </Link>
 
                     <Text size="sm" color="dimmed" className={classes.description}>
-                        Breathe Accra ensures openly accessible hyperlocal air quality data in the Greater Accra Metropolitan
-                        Area for public awareness and influencing air pollution control decision-making.
+                        Life | Love | Impact <br />
+                        Living, learning, & leveling up one day at a time.
                     </Text>
                 </div>
 
@@ -209,37 +164,75 @@ export function Footer() {
                     ]}
                     className={classes.groups}
                 >
-                    {groups}
+                    <div className={classes.wrapper}>
+                        <Text className={classes.title}>More of Me</Text>
+
+                        <Link
+                            className={classes.link}
+                            href="/about"
+                        >
+                            About
+                        </Link>
+
+                        <Link
+                            className={classes.link}
+                            href="/projects"
+                        >
+                            Projects
+                        </Link>
+
+                        <Link
+                            className={classes.link}
+                            href="/skills"
+                        >
+                            Skills
+                        </Link>
+
+                        <Link
+                            className={classes.link}
+                            href="/contact"
+                        >
+                            Contact
+                        </Link>
+                    </div>
+
+                    <div className={classes.wrapper}>
+                        <Text className={classes.title}>Say Hello</Text>
+
+                        <Group spacing={0} className={classes.social} position="right" noWrap>
+                            <Link href="https://www.facebook.com/breatheaccra" target="_blank">
+                                <ActionIcon size="xl" variant="subtle">
+                                    <IconBrandFacebook size={25} stroke={1.5} />
+                                </ActionIcon>
+                            </Link>
+                            <Link href="https://www.twitter.com/breatheaccra" target="_blank">
+                                <ActionIcon size="xl" variant="subtle">
+                                    <IconBrandTwitter size={25} stroke={1.5} />
+                                </ActionIcon>
+                            </Link>
+                            <Link href="https://www.youtube.com/breatheaccra" target="_blank">
+                                <ActionIcon size="xl" variant="subtle">
+                                    <IconBrandYoutube size={25} stroke={1.5} />
+                                </ActionIcon>
+                            </Link>
+                            <Link href="https://www.instagram.com/breatheaccra" target="_blank">
+                                <ActionIcon size="xl" variant="subtle">
+                                    <IconBrandInstagram size={25} stroke={1.5} />
+                                </ActionIcon>
+                            </Link>
+                        </Group>
+                    </div>
                 </SimpleGrid>
             </Container>
 
             <Container className={classes.afterFooter} size="xl">
                 <Text color="dimmed" size="sm">
-                    © 2023 Breath Accra. All rights reserved.
+                    © 2023 All rights reserved.
                 </Text>
 
-                <Group spacing={0} className={classes.social} position="right" noWrap>
-                    <Link href="https://www.facebook.com/breatheaccra" target="_blank">
-                        <ActionIcon size="xl" variant="subtle">
-                            <IconBrandFacebook size={25} stroke={1.5} />
-                        </ActionIcon>
-                    </Link>
-                    <Link href="https://www.twitter.com/breatheaccra" target="_blank">
-                        <ActionIcon size="xl" variant="subtle">
-                            <IconBrandTwitter size={25} stroke={1.5} />
-                        </ActionIcon>
-                    </Link>
-                    <Link href="https://www.youtube.com/breatheaccra" target="_blank">
-                        <ActionIcon size="xl" variant="subtle">
-                            <IconBrandYoutube size={25} stroke={1.5} />
-                        </ActionIcon>
-                    </Link>
-                    <Link href="https://www.instagram.com/breatheaccra" target="_blank">
-                        <ActionIcon size="xl" variant="subtle">
-                            <IconBrandInstagram size={25} stroke={1.5} />
-                        </ActionIcon>
-                    </Link>
-                </Group>
+                <Text color="dimmed" size="sm" fw="bold">
+                    Andrews Kwesi Ankomahene
+                </Text>
             </Container>
         </footer>
     );

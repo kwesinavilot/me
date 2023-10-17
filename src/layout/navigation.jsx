@@ -1,6 +1,5 @@
-import { createStyles, Header, Menu, Group, Burger, Container, ScrollArea, Image, Drawer } from '@mantine/core';
+import { createStyles, Header, Group, Burger, Container, Title } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-import { IconChevronDown } from '@tabler/icons-react';
 import Link from "next/link";
 // import { Sidebar } from './SideMenu';
 
@@ -92,8 +91,8 @@ const useStyles = createStyles((theme) => ({
         },
 
         [theme.fn.largerThan('md')]: {
-            paddingLeft: 30,
-            paddingRight: 30,
+            paddingLeft: '10%',
+            paddingRight: '10%',
         },
     }
 }));
@@ -108,12 +107,12 @@ const headerLinks = [
         label: 'About',
     },
     {
-        label: 'Air Quality',
-        link: '/aqi',
+        link: '/projects',
+        label: 'Projects',
     },
     {
-        link: '/historical-data',
-        label: 'Historical Data',
+        link: '/skills',
+        label: 'Skills',
     },
     {
         link: '/contact',
@@ -122,43 +121,10 @@ const headerLinks = [
 ];
 
 export function Navigation() {
-    const [opened, { open, close }] = useDisclosure(false);
+    // const [opened, { open, close }] = useDisclosure(false);
     const { classes } = useStyles();
 
     const items = headerLinks.map((link) => {
-        const menuItems = link.links?.map((item, key) => (
-            <Link key={key} href={item.link || '#'} className={classes.subLink}>
-                <Menu.Item className={classes.linkInner}>
-                    {item.label}
-                </Menu.Item>
-            </Link>
-        ));
-
-        if (menuItems) {
-            const scrollArea = menuItems.length > 8 ?
-                <ScrollArea h={250} scrollbarSize={8} type="auto" offsetScrollbars>
-                    {menuItems}</ScrollArea> : menuItems;
-
-            return (
-                <Menu key={link.label} trigger="hover" exitTransitionDuration={0}>
-                    <Menu.Target>
-                        <Link
-                            href={link.links ? '#' : `${link.link}`}
-                            as={link.link}
-                            className={classes.topLink}
-                        >
-                            <span className={classes.linkLabel}>{link.label}</span>
-                            <IconChevronDown size={12} stroke={1.5} />
-                        </Link>
-                    </Menu.Target>
-
-                    <Menu.Dropdown>
-                        {scrollArea}
-                    </Menu.Dropdown>
-                </Menu>
-            );
-        }
-
         return (
             <Link
                 key={link.label}
@@ -181,26 +147,21 @@ export function Navigation() {
                             href="/"
                             style={{ textDecoration: 'none', border: "solid 2px redirect" }}
                         >
-                            <Image
-                                src="/components/logo-gradient.png"
-                                width="130px"
-                                alt="Breathe Accra project logo"
-                                className={classes.partiesImage}
-                            />
+                            <Title order={4} color='black'>Kwesi Ankomahene</Title>
                         </Link>
 
                         <Group spacing={5} className={classes.links}>
                             {items}
                         </Group>
 
-                        <Burger
+                        {/* <Burger
                             opened={opened}
                             onClick={open}
                             className={classes.burger}
                             size="md"
                             title="Open navigation"
                             aria-label="Open navigation"
-                        />
+                        /> */}
                     </div>
                 </Container>
             </Header>

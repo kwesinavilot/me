@@ -6,6 +6,7 @@ import { createStyles } from "@mantine/core";
 const useStyles = createStyles((theme) => ({
     main: {
         paddingTop: "70px",
+        background: "red",
     }
 }));
 
