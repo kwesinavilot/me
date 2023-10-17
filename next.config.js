@@ -3,7 +3,20 @@ const nextConfig = {
   reactStrictMode: true,
 
   // Add basePath
-  basePath: '/github-pages',
+  basePath: '/me',
+}
+
+module.exports = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'kwesinavilot.github.io',
+        port: '',
+        pathname: '/me/**',
+      },
+    ]
+  }
 }
 
 module.exports = nextConfig
