@@ -1,10 +1,8 @@
 import {
-  Title, Container, ActionIcon, createStyles, Group, SimpleGrid, Blockquote, Image, Text, Card, Grid,
+  Title, Container, createStyles, SimpleGrid, Blockquote, Image, Text, Card, Grid,
 } from "@mantine/core";
-import { SEOHead } from "../layout/SEOHead";
+import { SEOHead } from "../components/layout/SEOHead";
 import { Typewriter } from 'react-simple-typewriter';
-import Link from "next/link";
-import { IconMail, IconBrandLinkedin, IconBrandTwitter, IconBrandYoutube, IconBrandInstagram, IconBrandFacebook } from '@tabler/icons-react';
 
 const useStyles = createStyles((theme) => ({
   container: {
@@ -25,21 +23,6 @@ const useStyles = createStyles((theme) => ({
 
     [theme.fn.largerThan('sm')]: {
       padding: "5%",
-    },
-  },
-
-  social: {
-    'button': {
-      color: theme.colors.main[9]
-    },
-
-    'button:hover': {
-      color: theme.black,
-      backgroundColor: theme.white,
-    },
-
-    [theme.fn.smallerThan('sm')]: {
-      marginTop: theme.spacing.xs,
     },
   },
 
@@ -264,50 +247,6 @@ export default function Home() {
               {interests}
             </SimpleGrid>
           </Container>
-        </Container>
-
-        <Container bg="black" py="4%" px={0} fluid>
-          <Title c="white" order={2} align="center" mb="1.5rem">
-            Connect With Me
-          </Title>
-
-          <Group spacing="2%" className={classes.social} position="center" noWrap>
-            <Link href="mailto:andrews.ankomahene@gmail.com" target="_blank">
-              <ActionIcon size="xl" variant="subtle" radius="xl">
-                <IconMail size={30} stroke={1.25} />
-              </ActionIcon>
-            </Link>
-
-            <Link href="https://www.linkedin.com/in/andrews-kwesi-ankomahene/" target="_blank">
-              <ActionIcon size="xl" variant="subtle" radius="xl">
-                <IconBrandLinkedin size={30} stroke={1.25} />
-              </ActionIcon>
-            </Link>
-
-            <Link href="https://www.twitter.com/kwesinavilot" target="_blank">
-              <ActionIcon size="xl" variant="subtle" radius="xl">
-                <IconBrandTwitter size={30} stroke={1.25} />
-              </ActionIcon>
-            </Link>
-
-            <Link href="https://www.instagram.com/thekwesinavilot" target="_blank">
-              <ActionIcon size="xl" variant="subtle" radius="xl">
-                <IconBrandInstagram size={30} stroke={1.25} />
-              </ActionIcon>
-            </Link>
-
-            <Link href="https://www.facebook.com/andrewskwesi.ankomahene.3/" target="_blank">
-              <ActionIcon size="xl" variant="subtle" radius="xl">
-                <IconBrandFacebook size={30} stroke={1.25} />
-              </ActionIcon>
-            </Link>
-
-            <Link href="https://www.youtube.com/buildwithnavilot" target="_blank">
-              <ActionIcon size="xl" variant="subtle" radius="xl">
-                <IconBrandYoutube size={30} stroke={1.25} />
-              </ActionIcon>
-            </Link>
-          </Group>
         </Container>
       </>
     </>

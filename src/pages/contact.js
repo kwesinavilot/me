@@ -1,10 +1,9 @@
 import {
-    Button, Group, Container, createStyles, Flex, SimpleGrid, Stack,
+    Button, AspectRatio, Group, Grid, Container, createStyles, Flex, SimpleGrid, Stack,
     Text, ThemeIcon, Title, Space, LoadingOverlay
 } from "@mantine/core";
-import { AreaMap } from "../components/Map/AreaMap";
 import { IconBrandWhatsapp, IconMapPin, IconPhoneCall, IconMail } from '@tabler/icons-react'
-import { FloatingLabelInput, FloatingLabelTextarea } from "../components/Forms/FloatingLabelInputs";
+import { FloatingLabelInput, FloatingLabelTextarea } from "../components/forms/FloatingLabelInputs";
 import { useForm } from "@mantine/form";
 import { useState } from "react";
 import { SEOHead } from "../components/Layout/SEOHead";
@@ -14,23 +13,23 @@ const data = [
         icon: IconMapPin,
         title: "Location",
         medium: {
-            first: "University of Cape Coast,",
-            second: "Cape Coast, Ghana",
+            first: "Ambassadorial Enclave, 20 Aluguntugui St,",
+            second: "Accra, Ghana",
         }
     },
     {
         icon: IconMail,
         title: "Email",
         medium: {
-            first: "aamegah@ucc.edu.gh",
-            second: "info@breatheaccra.org",
+            first: "andrews.ankomahene@gmail.com",
+            second: "andrews.ankomahene@meltwater.org",
         }
     },
     {
         icon: IconPhoneCall,
         title: "Call",
         medium: {
-            first: "+233243032676",
+            first: "+233501212723",
             second: "+233245868379",
         }
     },
@@ -38,8 +37,7 @@ const data = [
         icon: IconBrandWhatsapp,
         title: "WhatsApp",
         medium: {
-            first: "+233243032676",
-            second: "+233245868379",
+            first: "+233501212723",
         }
     }
 ]
@@ -88,7 +86,7 @@ const useStyles = createStyles((theme) => (
             },
 
             [theme.fn.largerThan('md')]: {
-                padding: "5%",
+                padding: "3.5% 5%",
             },
         },
 
@@ -122,33 +120,44 @@ const useStyles = createStyles((theme) => (
                 marginLeft: "auto",
                 marginRight: "auto"
             }
-        }
+        },
+
+        map: {
+            [theme.fn.smallerThan('xs')]: {
+                height: '55vh',
+            },
+    
+            [theme.fn.largerThan('xs')]: {
+                height: '55vh',
+            },
+        },
     }));
 
 export function ContactMedium({ icon: Icon, title, medium }) {
     const classes = useStyles();
 
     return (
-        <Flex
-            gap="lg"
-            justify={{ xs: 'center', sm: 'flex-start' }}
-            align="flex-start"
-            direction="row"
-            className={classes.points}
-        // mx="auto"
-        >
-            <ThemeIcon size={50} radius={40} color="main.5">
-                <Icon size="1.5rem" stroke={1.5} />
-            </ThemeIcon>
+        <Grid.Col span="content">
+            <Flex
+                gap="lg"
+                justify={{ xs: 'center', sm: 'flex-start' }}
+                align="flex-start"
+                direction="row"
+                className={classes.points}
+            >
+                <ThemeIcon size={50} radius={40} color="main.5">
+                    <Icon size="1.5rem" stroke={1.5} />
+                </ThemeIcon>
 
-            <Stack align="left" justify="flex-start" spacing="xs">
-                <Text fw={700} fz="lg">
-                    {title}
-                </Text>
-                <Text>{medium.first}</Text>
-                <Text>{medium.second}</Text>
-            </Stack>
-        </Flex>
+                <Stack align="left" justify="flex-start" spacing="xs">
+                    <Text fw={700} fz="lg">
+                        {title}
+                    </Text>
+                    <Text>{medium.first}</Text>
+                    <Text>{medium.second}</Text>
+                </Stack>
+            </Flex>
+        </Grid.Col >
     );
 }
 
@@ -207,45 +216,37 @@ export default function Contact({ sensors }) {
     return (
         <>
             <SEOHead
-                title="Contact Us"
+                title="Contact Me"
                 keywords="BreatheAccra, breathe accra, contact breathe accra, accra air quality, Accra, Ghana, ghana pollution concern, ask breathe accra, breathe accra mission, breathe accra community, breathe accra support, contact breathe accra, how to contact breathe accra, email breathe accra, phone breathe accra, address breathe accra"
-                description="Get in touch with Breathe Accra to learn more about air quality in Accra, Ghana. Contact us to report a concern, ask a question, or find out how you can support our mission to improve the health of our community."
+                description="Get in touch with me to learn more about air quality in Accra, Ghana. Contact us to report a concern, ask a question, or find out how you can support our mission to improve the health of our community."
             />
 
             <>
                 <Container size="lg" data-purpose="page-header" className={classes.topLevel}>
-                    <Title order={3} className={classes.title}>Contact Us</Title>
+                    <Title order={3} className={classes.title}>Contact Me</Title>
 
                     <Text className={classes.light}>
-                        Reach out to us for further information on the project and how to support our activities
+                        Got a question or proposal, or just want to say hello?
                     </Text>
                 </Container>
 
-                <AreaMap
-                    sensors={sensors}
-                    zoom={18}
-                    stylersVisibility="on"
-                />
+                <AspectRatio className={classes.map} ratio={16 / 9}>
+                    <iframe src="https://www.google.com/maps/d/u/3/embed?mid=12AIQNFQTIGw6BuYAPM51BonpmWvlP7M&ehbc=2E312F"
+                        width="640"
+                        height="480"
+                        title="Google map"
+                    >
+                    </iframe>
+                </AspectRatio>
 
                 <Container className={classes.spaceIn} fluid>
                     <Title order={3} align="center" mb="3%">
-                        Ping Us
+                        Ping Me
                     </Title>
 
-                    <SimpleGrid
-                        cols={4}
-                        spacing="xl"
-                        verticalSpacing="xl"
-                        breakpoints={[
-                            { maxWidth: 'lg', cols: 4, spacing: 'xl' },
-                            { maxWidth: 'md', cols: 2, spacing: 'xl' },
-                            { maxWidth: 'sm', cols: 2, spacing: 'xl' },
-                            { maxWidth: 'xs', cols: 1, spacing: 'md' },
-                        ]}
-                        mt="xl"
-                    >
+                    <Grid gutter="5%" justify="center" align="flex-start">
                         {mediums}
-                    </SimpleGrid>
+                    </Grid>
                 </Container>
 
                 <Container className={classes.spaceIn} size="md">
@@ -253,9 +254,9 @@ export default function Contact({ sensors }) {
                         <div data-purpose="contact-us-success">
                             <Title ta="center" color="main.5">Thanks for getting in touch!</Title>
                             <Text ta="center" mt="md" fw={500}>
-                                We've received your message and appreciate you contacting us.
-                                If your inquiry is urgent, please use the phone numbers listed above to reach us.
-                                Otherwise, we will reply by email as soon as possible.
+                                I've received your message and appreciate you contacting me.
+                                If your message is urgent, please use the phone numbers listed above to reach me.
+                                Otherwise, I will reply by email as soon as possible.
                             </Text>
                         </div>
                     ) : (
@@ -332,7 +333,7 @@ export default function Contact({ sensors }) {
 
                                 <Group position="center" mt="xl">
                                     <Button type="submit" size="md" className={classes.learnMoreButton}>
-                                        Send message
+                                        Send Message
                                     </Button>
                                 </Group>
                             </form>
@@ -342,16 +343,4 @@ export default function Contact({ sensors }) {
             </>
         </>
     );
-}
-
-export async function getStaticProps() {
-    const sensors = [
-        { latitude: 5.116299, longitude: -1.294006, districtName: 'Breathe Accra', vicinity: "University of Cape Coast" },
-    ];
-
-    return {
-        props: {
-            sensors,
-        }
-    }
 }

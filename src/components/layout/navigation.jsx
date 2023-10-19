@@ -1,5 +1,4 @@
 import { createStyles, Header, Group, Burger, Container, Title } from '@mantine/core';
-import { useDisclosure } from '@mantine/hooks';
 import Link from "next/link";
 // import { Sidebar } from './SideMenu';
 
@@ -29,7 +28,7 @@ const useStyles = createStyles((theme) => ({
         position: 'relative',
 
         '&:hover': {
-            color: theme.black,
+            color: theme.colors.main[5],
         },
 
         '&:hover::before': {
@@ -39,7 +38,7 @@ const useStyles = createStyles((theme) => ({
             left: 0,
             width: '100%',
             height: '2px',
-            backgroundColor: theme.black,
+            backgroundColor: theme.colors.main[5],
             transition: 'transform 0.3s',
             transform: 'scaleX(1)',
             transformOrigin: 'left center',
@@ -52,7 +51,7 @@ const useStyles = createStyles((theme) => ({
             left: 0,
             width: '100%',
             height: '2px',
-            backgroundColor: theme.black,
+            backgroundColor: theme.colors.main[5],
             transition: 'transform 0.3s',
             transform: 'scaleX(0)',
             transformOrigin: 'left center',
