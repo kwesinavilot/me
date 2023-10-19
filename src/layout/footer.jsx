@@ -80,7 +80,7 @@ const useStyles = createStyles((theme) => ({
 
         '&:hover': {
             textDecoration: 'underline',
-            color: theme.colors.main[5],
+            color: theme.black,
         },
     },
 
@@ -88,7 +88,7 @@ const useStyles = createStyles((theme) => ({
         fontSize: theme.fontSizes.md,
         fontWeight: 700,
         marginBottom: theme.spacing.xs / 2,
-        color: theme.colors.main[5],
+        color: theme.black,
     },
 
     afterFooter: {
@@ -105,21 +105,6 @@ const useStyles = createStyles((theme) => ({
             flexDirection: 'column',
         },
     },
-
-    social: {
-        'button': {
-            color: theme.colors.main[5]
-        },
-
-        'button:hover': {
-            color: theme.colors.main[9],
-            backgroundColor: theme.colors.main[5]
-        },
-
-        [theme.fn.smallerThan('sm')]: {
-            marginTop: theme.spacing.xs,
-        },
-    }
 }));
 
 const data = [
@@ -194,33 +179,6 @@ export function Footer() {
                         >
                             Contact
                         </Link>
-                    </div>
-
-                    <div className={classes.wrapper}>
-                        <Text className={classes.title}>Say Hello</Text>
-
-                        <Group spacing={0} className={classes.social} position="right" noWrap>
-                            <Link href="https://www.facebook.com/breatheaccra" target="_blank">
-                                <ActionIcon size="xl" variant="subtle">
-                                    <IconBrandFacebook size={25} stroke={1.5} />
-                                </ActionIcon>
-                            </Link>
-                            <Link href="https://www.twitter.com/breatheaccra" target="_blank">
-                                <ActionIcon size="xl" variant="subtle">
-                                    <IconBrandTwitter size={25} stroke={1.5} />
-                                </ActionIcon>
-                            </Link>
-                            <Link href="https://www.youtube.com/breatheaccra" target="_blank">
-                                <ActionIcon size="xl" variant="subtle">
-                                    <IconBrandYoutube size={25} stroke={1.5} />
-                                </ActionIcon>
-                            </Link>
-                            <Link href="https://www.instagram.com/breatheaccra" target="_blank">
-                                <ActionIcon size="xl" variant="subtle">
-                                    <IconBrandInstagram size={25} stroke={1.5} />
-                                </ActionIcon>
-                            </Link>
-                        </Group>
                     </div>
                 </SimpleGrid>
             </Container>
