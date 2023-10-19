@@ -1,29 +1,12 @@
 import {
-  Title, Container, createStyles, SimpleGrid, Blockquote, Image, Text, Button, Card, Grid, Col, getStylesRef,
+  Title, Container, createStyles, SimpleGrid, Blockquote, Image, Text, Card, Grid, Col, getStylesRef,
 } from "@mantine/core";
-import Link from "next/link";
 import { SEOHead } from "../layout/SEOHead";
-import { Typewriter } from 'react-simple-typewriter'
+import { Typewriter } from 'react-simple-typewriter';
 
 const useStyles = createStyles((theme) => ({
   container: {
     padding: "0%",
-
-    // [theme.fn.largerThan('xs')]: {
-    //     backgroundColor: theme.colors.orange[6],
-    // },
-
-    // [theme.fn.largerThan('sm')]: {
-    //     backgroundColor: theme.colors.red[6],
-    // },
-
-    // [theme.fn.largerThan('md')]: {
-    //     backgroundColor: theme.colors.blue[6],
-    // },
-
-    // [theme.fn.largerThan('lg')]: {
-    //     backgroundColor: theme.colors.yellow[6],
-    // },
   },
 
   spaceIn: {
@@ -64,10 +47,97 @@ const useStyles = createStyles((theme) => ({
       textAlign: "left",
     },
   },
+
+  card: {
+    position: 'relative',
+    backgroundColor: theme.white,
+    flexDirection: 'column',
+    alignItems: 'flex-start',
+  },
+
+  cardTitle: {
+    textAlign: "center",
+    fontWeight: 600,
+    color: theme.black,
+    marginTop: theme.spacing.sm,
+  },
 }));
+
+const interestData = [
+  {
+    title: 'Backend Engineering',
+    description:
+      'I have a deep interest in backend development, where I craft the logic and functionality that powers applications.',
+    image: {
+      src: "/images/backend.jpg",
+      width: 370
+    },
+  },
+  {
+    title: 'Data Science',
+    description:
+      'Data fascinates me, and I enjoy extracting insights from data to inform decisions.',
+    image: {
+      src: "/images/ds-1.jpg",
+      width: 360
+    },
+  },
+  {
+    title: 'AI/ML',
+    description:
+      "I'm exploring the fascinating world of Artificial Intelligence and Machine Learning to build intelligent applications.",
+    image: {
+      src: "/images/ai-ml-1.jpg",
+      width: 365
+    },
+  },
+  {
+    title: 'Blockchain',
+    description:
+      "The potential for blockchain technology to revolutionize industries is a subject of great interest to me.",
+    image: {
+      src: "/images/block-1.jpeg",
+      width: 360
+    },
+  },
+  // {
+  //   title: 'Cybersecurity',
+  //   description:
+  //     "I recognize the importance of safeguarding digital assets, and I'm dedicated to learning about cybersecurity best practices.",
+  //   image: {
+  //     src: "dd.png",
+  //     width: 200
+  //   },
+  // }
+];
+
+export function Interests({ title, image: { src, width }, description }) {
+  const { classes } = useStyles();
+
+  return (
+    <Card withBorder shadow="md" radius="md" className={classes.card}>
+      <Card.Section>
+        <Image
+          src={src}
+          width={width}
+          height={300}
+          alt={title}
+        />
+      </Card.Section>
+
+      <Title order={4} className={classes.cardTitle}>{title}</Title>
+
+      <Text className={classes.role} c="dimmed">{description}</Text>
+
+
+    </Card>
+  );
+}
 
 export default function Home() {
   const { classes, cx } = useStyles();
+
+  const interests = interestData.map((interests, index) => <Interests {...interests} key={index} />)
 
   return (
     <>
@@ -146,17 +216,38 @@ export default function Home() {
                 </Blockquote>
 
                 <Text className={classes.textAlign} mb="5%">
-                This quote is a powerful reminder that anything is possible if I set my mind to it. Nelson Mandela himself is a testament to this quote,
-                 having overcome seemingly insurmountable odds to become the first black president of South Africa.
+                  This quote is a powerful reminder that anything is possible if I set my mind to it. Nelson Mandela himself is a testament to this quote,
+                  having overcome seemingly insurmountable odds to become the first black president of South Africa.
                 </Text>
 
                 <Text>
                   This quote reminds me that even the tallest mountains can be climbed and conquered. It may not seem possible
-                   initially, but with an optimistic mindset, focus, patience, and persistence, I can achieve anything. 
-                   All it takes is the courage to try and the determination to never give up.
+                  initially, but with an optimistic mindset, focus, patience, and persistence, I can achieve anything.
+                  All it takes is the courage to try and the determination to never give up.
                 </Text>
               </Grid.Col>
             </Grid>
+          </Container>
+
+          <Container py="4%" px={0} size="xl">
+            <Title order={2} align="center" mb="3rem">
+              My Areas Of Interest
+            </Title>
+
+            <SimpleGrid
+              cols={4}
+              spacing="xl"
+              verticalSpacing="xl"
+              breakpoints={[
+                { maxWidth: 'lg', cols: 3, spacing: 'xl' },
+                { maxWidth: 'md', cols: 2, spacing: 'xl' },
+                { maxWidth: 'sm', cols: 2, spacing: 'xl' },
+                { maxWidth: 'xs', cols: 2, spacing: 'md' },
+              ]}
+              className={classes.partiesCol}
+            >
+              {interests}
+            </SimpleGrid>
           </Container>
         </Container>
       </>
