@@ -1,8 +1,10 @@
 import {
-  Title, Container, createStyles, SimpleGrid, Blockquote, Image, Text, Card, Grid, Col, getStylesRef,
+  Title, Container, ActionIcon, createStyles, Group, SimpleGrid, Blockquote, Image, Text, Card, Grid,
 } from "@mantine/core";
 import { SEOHead } from "../layout/SEOHead";
 import { Typewriter } from 'react-simple-typewriter';
+import Link from "next/link";
+import { IconMail, IconBrandLinkedin, IconBrandTwitter, IconBrandYoutube, IconBrandInstagram, IconBrandFacebook } from '@tabler/icons-react';
 
 const useStyles = createStyles((theme) => ({
   container: {
@@ -23,6 +25,21 @@ const useStyles = createStyles((theme) => ({
 
     [theme.fn.largerThan('sm')]: {
       padding: "5%",
+    },
+  },
+
+  social: {
+    'button': {
+      color: theme.colors.main[9]
+    },
+
+    'button:hover': {
+      color: theme.black,
+      backgroundColor: theme.white,
+    },
+
+    [theme.fn.smallerThan('sm')]: {
+      marginTop: theme.spacing.xs,
     },
   },
 
@@ -53,13 +70,20 @@ const useStyles = createStyles((theme) => ({
     backgroundColor: theme.white,
     flexDirection: 'column',
     alignItems: 'flex-start',
+    transition: 'box-shadow 150ms ease, transform 100ms ease',
+
+    '&:hover': {
+      boxShadow: theme.shadows.md,
+      transform: 'scale(1.02)',
+    },
   },
 
   cardTitle: {
     textAlign: "center",
     fontWeight: 600,
     color: theme.black,
-    marginTop: theme.spacing.sm,
+    marginTop: theme.spacing.md,
+    marginBottom: theme.spacing.sm,
   },
 }));
 
@@ -100,22 +124,13 @@ const interestData = [
       width: 360
     },
   },
-  // {
-  //   title: 'Cybersecurity',
-  //   description:
-  //     "I recognize the importance of safeguarding digital assets, and I'm dedicated to learning about cybersecurity best practices.",
-  //   image: {
-  //     src: "dd.png",
-  //     width: 200
-  //   },
-  // }
 ];
 
 export function Interests({ title, image: { src, width }, description }) {
   const { classes } = useStyles();
 
   return (
-    <Card withBorder shadow="md" radius="md" className={classes.card}>
+    <Card withBorder radius="md" className={classes.card}>
       <Card.Section>
         <Image
           src={src}
@@ -249,6 +264,50 @@ export default function Home() {
               {interests}
             </SimpleGrid>
           </Container>
+        </Container>
+
+        <Container bg="black" py="4%" px={0} fluid>
+          <Title c="white" order={2} align="center" mb="1.5rem">
+            Connect With Me
+          </Title>
+
+          <Group spacing="2%" className={classes.social} position="center" noWrap>
+            <Link href="mailto:andrews.ankomahene@gmail.com" target="_blank">
+              <ActionIcon size="xl" variant="subtle" radius="xl">
+                <IconMail size={30} stroke={1.25} />
+              </ActionIcon>
+            </Link>
+
+            <Link href="https://www.linkedin.com/in/andrews-kwesi-ankomahene/" target="_blank">
+              <ActionIcon size="xl" variant="subtle" radius="xl">
+                <IconBrandLinkedin size={30} stroke={1.25} />
+              </ActionIcon>
+            </Link>
+
+            <Link href="https://www.twitter.com/kwesinavilot" target="_blank">
+              <ActionIcon size="xl" variant="subtle" radius="xl">
+                <IconBrandTwitter size={30} stroke={1.25} />
+              </ActionIcon>
+            </Link>
+
+            <Link href="https://www.instagram.com/thekwesinavilot" target="_blank">
+              <ActionIcon size="xl" variant="subtle" radius="xl">
+                <IconBrandInstagram size={30} stroke={1.25} />
+              </ActionIcon>
+            </Link>
+
+            <Link href="https://www.facebook.com/andrewskwesi.ankomahene.3/" target="_blank">
+              <ActionIcon size="xl" variant="subtle" radius="xl">
+                <IconBrandFacebook size={30} stroke={1.25} />
+              </ActionIcon>
+            </Link>
+
+            <Link href="https://www.youtube.com/buildwithnavilot" target="_blank">
+              <ActionIcon size="xl" variant="subtle" radius="xl">
+                <IconBrandYoutube size={30} stroke={1.25} />
+              </ActionIcon>
+            </Link>
+          </Group>
         </Container>
       </>
     </>
