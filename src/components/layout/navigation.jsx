@@ -29,7 +29,7 @@ const useStyles = createStyles((theme) => ({
         position: 'relative',
 
         '&:hover': {
-            color: theme.colors.main[5],
+            color: theme.black,
         },
 
         '&:hover::before': {
@@ -39,7 +39,7 @@ const useStyles = createStyles((theme) => ({
             left: 0,
             width: '100%',
             height: '2px',
-            backgroundColor: theme.colors.main[5],
+            backgroundColor: theme.black,
             transition: 'transform 0.3s',
             transform: 'scaleX(1)',
             transformOrigin: 'left center',
@@ -52,7 +52,7 @@ const useStyles = createStyles((theme) => ({
             left: 0,
             width: '100%',
             height: '2px',
-            backgroundColor: theme.colors.main[5],
+            backgroundColor: theme.black,
             transition: 'transform 0.3s',
             transform: 'scaleX(0)',
             transformOrigin: 'left center',

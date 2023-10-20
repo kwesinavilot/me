@@ -40,6 +40,16 @@ const useStyles = createStyles((theme) => ({
 
   textAlign: {
     [theme.fn.smallerThan('md')]: {
+      textAlign: "left",
+    },
+
+    [theme.fn.largerThan('md')]: {
+      textAlign: "left",
+    },
+  },
+
+  lowConTitle: {
+    [theme.fn.smallerThan('md')]: {
       textAlign: "center",
     },
 
@@ -68,6 +78,75 @@ const useStyles = createStyles((theme) => ({
     marginTop: theme.spacing.md,
     marginBottom: theme.spacing.sm,
   },
+
+  topContainer: {
+    [theme.fn.smallerThan('lg')]: {
+      padding: "0 4% 0",
+    },
+
+    [theme.fn.smallerThan('md')]: {
+      padding: "10% 5% 0",
+    },
+
+    [theme.fn.smallerThan('sm')]: {
+      padding: "10% 0 0",
+    },
+  },
+
+  greeting: {
+    [theme.fn.smallerThan('lg')]: {
+      fontSize: 32,
+    },
+
+    [theme.fn.smallerThan('md')]: {
+      fontSize: 32
+    },
+
+    [theme.fn.smallerThan('sm')]: {
+      fontSize: 20,
+    },
+  },
+
+  typewriter: {
+    fontWeight: 700,
+    fontSize: "60px",
+
+    [theme.fn.smallerThan('lg')]: {
+      fontSize: 53,
+    },
+
+    [theme.fn.smallerThan('md')]: {
+      fontSize: 60
+    },
+
+    [theme.fn.smallerThan('sm')]: {
+      fontSize: 35,
+    },
+  },
+
+  secondCol: {
+    paddingTop: 0,
+    paddingButtom: 0,
+  },
+
+  lowerContainer: {
+    background: theme.white,
+    padding: 0,
+
+    [theme.fn.smallerThan('lg')]: {
+      paddingLeft: "7%",
+      paddingRight: "7%",
+    },
+
+    [theme.fn.smallerThan('md')]: {
+      paddingLeft: "5%",
+      paddingRight: "5%",
+    },
+
+    [theme.fn.smallerThan('sm')]: {
+      paddingBottom: "10%",
+    },
+  }
 }));
 
 const interestData = [
@@ -146,18 +225,17 @@ export default function Home() {
       />
 
       <>
-        <Container size="xl">
+        <Container className={classes.topContainer} size="xl">
           <Grid m={0} gutter={80} justify="space-around" align="center">
-            <Grid.Col span={7} className={classes.firstCol}>
-              <Title>Hello, I'm Andrews Kwesi Ankomahene;</Title>
+            <Grid.Col md={8} lg={7} className={classes.firstCol}>
+              <Title className={classes.greeting}>Hello, I'm Andrews Kwesi Ankomahene;</Title>
 
-              <Title fz="60px">
+              <Title className={classes.typewriter}>
                 a <Text
                   variant="gradient"
                   gradient={{ from: 'indigo', to: 'cyan', deg: 45 }}
                   component="span"
-                  fw={700}
-                  fz="60px"
+                  className={classes.typewriter}
                 >
                   <Typewriter
                     words={['Technopreneur', 'Software Engineer', 'Blockchain Enthusiast']}
@@ -172,17 +250,17 @@ export default function Home() {
               </Title>
             </Grid.Col>
 
-            <Grid.Col span={5} p={0}>
+            <Grid.Col md={4} lg={5} p={0}>
               <Image src="/images/headshot.png" />
             </Grid.Col>
           </Grid>
         </Container>
 
-        <Container bg="white" p={0} fluid>
-          <Container py="4%" px={0} size="xl">
-            <Grid m={0} gutter={100} justify="space-between" align="flex-start">
-              <Grid.Col span={6} className={classes.firstCol}>
-                <Title order={2} className={classes.textAlign} mb="sm">
+        <Container className={classes.lowerContainer} fluid>
+          <Container py="5%" px={0} size="xl">
+            <Grid m={0} gutter={100} gutterXs="md" gutterMd="xl" justify="space-between" align="flex-start">
+              <Grid.Col md={12} lg={6} className={classes.firstCol}>
+                <Title order={2} className={classes.lowConTitle} mb="sm">
                   Overview
                 </Title>
 
@@ -197,15 +275,15 @@ export default function Home() {
                   just right for them or their customers.
                 </Text>
 
-                <Text>
+                <Text className={classes.textAlign}>
                   My colleagues often describe me as a proactive and resourceful individual with a positive attitude and a strong commitment to meeting goals.
                   I am always seeking an opportunity where I can utilize my technical skills and problem-solving abilities to drive innovation and success and make a
                   positive impact.
                 </Text>
               </Grid.Col>
 
-              <Grid.Col span={6} py={0}>
-                <Title order={2} className={classes.textAlign} mb="sm">
+              <Grid.Col md={12} lg={6} className={classes.secondCol}>
+                <Title order={2} className={classes.lowConTitle} mb="sm">
                   Favourite Quote
                 </Title>
 
@@ -227,7 +305,7 @@ export default function Home() {
             </Grid>
           </Container>
 
-          <Container py="4%" px={0} size="xl">
+          <Container py="5%" px={0} size="xl">
             <Title order={2} align="center" mb="3rem">
               My Areas Of Interest
             </Title>
@@ -235,12 +313,12 @@ export default function Home() {
             <SimpleGrid
               cols={4}
               spacing="xl"
-              verticalSpacing="xl"
+              verticalSpacing="2rem"
               breakpoints={[
                 { maxWidth: 'lg', cols: 3, spacing: 'xl' },
                 { maxWidth: 'md', cols: 2, spacing: 'xl' },
                 { maxWidth: 'sm', cols: 2, spacing: 'xl' },
-                { maxWidth: 'xs', cols: 2, spacing: 'md' },
+                { maxWidth: 'xs', cols: 1, spacing: 'xl' },
               ]}
               className={classes.partiesCol}
             >

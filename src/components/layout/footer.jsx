@@ -27,13 +27,13 @@ const useStyles = createStyles((theme) => ({
     },
 
     logo: {
-        maxWidth: 250,
+        maxWidth: 350,
 
         [theme.fn.smallerThan('sm')]: {
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
-            maxWidth: 320,
+            maxWidth: 350,
             margin: 'auto',
         },
     },
@@ -73,7 +73,7 @@ const useStyles = createStyles((theme) => ({
     link: {
         display: 'block',
         color: theme.colors.gray[6],
-        fontSize: theme.fontSizes.sm,
+        fontSize: theme.fontSizes.md,
         paddingTop: 3,
         paddingBottom: 3,
         textDecoration: "none",
@@ -119,6 +119,18 @@ const useStyles = createStyles((theme) => ({
         [theme.fn.smallerThan('sm')]: {
             marginTop: theme.spacing.xs,
         },
+
+        [theme.fn.smallerThan('md')]: {
+            padding: "2%",
+        },
+    },
+
+    icons: {
+        width: 30,
+
+        [theme.fn.smallerThan('md')]: {
+            width: 50,
+        }
     },
 }));
 
@@ -135,37 +147,37 @@ export function Footer() {
                 <Group spacing="2%" className={classes.social} position="center" noWrap>
                     <Link href="mailto:andrews.ankomahene@gmail.com" target="_blank">
                         <ActionIcon size="xl" variant="subtle" radius="xl">
-                            <IconMail size={30} stroke={1.25} />
+                            <IconMail className={classes.icons} stroke={1.25} />
                         </ActionIcon>
                     </Link>
 
                     <Link href="https://www.linkedin.com/in/andrews-kwesi-ankomahene/" target="_blank">
                         <ActionIcon size="xl" variant="subtle" radius="xl">
-                            <IconBrandLinkedin size={30} stroke={1.25} />
+                            <IconBrandLinkedin className={classes.icons} stroke={1.25} />
                         </ActionIcon>
                     </Link>
 
                     <Link href="https://www.twitter.com/kwesinavilot" target="_blank">
                         <ActionIcon size="xl" variant="subtle" radius="xl">
-                            <IconBrandTwitter size={30} stroke={1.25} />
+                            <IconBrandTwitter className={classes.icons} stroke={1.25} />
                         </ActionIcon>
                     </Link>
 
                     <Link href="https://www.instagram.com/thekwesinavilot" target="_blank">
                         <ActionIcon size="xl" variant="subtle" radius="xl">
-                            <IconBrandInstagram size={30} stroke={1.25} />
+                            <IconBrandInstagram className={classes.icons} stroke={1.25} />
                         </ActionIcon>
                     </Link>
 
                     <Link href="https://www.facebook.com/andrewskwesi.ankomahene.3/" target="_blank">
                         <ActionIcon size="xl" variant="subtle" radius="xl">
-                            <IconBrandFacebook size={30} stroke={1.25} />
+                            <IconBrandFacebook className={classes.icons} stroke={1.25} />
                         </ActionIcon>
                     </Link>
 
                     <Link href="https://www.youtube.com/buildwithnavilot" target="_blank">
                         <ActionIcon size="xl" variant="subtle" radius="xl">
-                            <IconBrandYoutube size={30} stroke={1.25} />
+                            <IconBrandYoutube className={classes.icons} stroke={1.25} />
                         </ActionIcon>
                     </Link>
                 </Group>
@@ -181,7 +193,7 @@ export function Footer() {
                             <Title order={4} color='black'>Kwesi Ankomahene</Title>
                         </Link>
 
-                        <Text size="sm" color="dimmed" className={classes.description}>
+                        <Text size="md" color="dimmed" className={classes.description}>
                             Life | Love | Impact <br />
                             Living, learning, & leveling up one day at a time.
                         </Text>
