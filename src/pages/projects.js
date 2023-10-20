@@ -1,5 +1,5 @@
 import {
-    Title, Container, createStyles, SimpleGrid, Image, Text, Card, Grid,
+    Title, Container, createStyles, SimpleGrid, Image, Text, Card, getStylesRef,
 } from "@mantine/core";
 import { SEOHead } from "../components/layout/SEOHead";
 import Link from "next/link";
@@ -51,11 +51,14 @@ const useStyles = createStyles((theme) => ({
         backgroundColor: theme.white,
         flexDirection: 'column',
         alignItems: 'flex-start',
-        transition: 'box-shadow 150ms ease, transform 100ms ease',
+        transition: 'border 150ms ease',
 
         '&:hover': {
-            boxShadow: theme.shadows.md,
-            transform: 'scale(1.02)',
+            boxShadow: theme.shadows.xs
+        },
+
+        [`&:hover .${getStylesRef('image')}`]: {
+            transform: 'scale(1.05)',
         },
     },
 
@@ -77,6 +80,12 @@ const useStyles = createStyles((theme) => ({
             fontSize: 28,
         },
     },
+
+    image: {
+        ref: getStylesRef('image'),
+
+        transition: "transform 500ms ease",
+    }
 }));
 
 const worksData = [
@@ -176,7 +185,7 @@ export function Work({ title, image: { src, width }, description, link }) {
     const { classes } = useStyles();
 
     return (
-        <Link 
+        <Link
             href={link}
             style={{ textDecoration: 'none', width: '100%' }}
             target="_blank"
@@ -188,6 +197,7 @@ export function Work({ title, image: { src, width }, description, link }) {
                         width={width}
                         height={300}
                         alt={title}
+                        className={classes.image}
                     />
                 </Card.Section>
 
@@ -217,7 +227,7 @@ export default function Projects() {
                     <Title order={3} className={classes.title}>My Works</Title>
 
                     <Text className={classes.light}>
-                        Here are projects I have worked on
+                        Here are a few remarkable projects I have worked on
                     </Text>
                 </Container>
 
@@ -225,7 +235,7 @@ export default function Projects() {
                     <SimpleGrid
                         cols={3}
                         spacing="xl"
-                        verticalSpacing="xl"
+                        verticalSpacing="3rem"
                         breakpoints={[
                             { maxWidth: 'lg', cols: 3, spacing: 'xl' },
                             { maxWidth: 'md', cols: 2, spacing: 'xl' },
