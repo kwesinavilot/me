@@ -155,7 +155,7 @@ const interestData = [
     description:
       'I have a deep interest in backend development, where I craft the logic and functionality that powers applications.',
     image: {
-      src: "/images/backend.jpg",
+      src: "/images/backend.webp",
       width: 370
     },
   },
@@ -182,7 +182,7 @@ const interestData = [
     description:
       "The potential for blockchain technology to revolutionize industries is a subject of great interest to me.",
     image: {
-      src: "/images/block-1.jpeg",
+      src: "/images/block-1.jpg",
       width: 360
     },
   },
@@ -307,7 +307,7 @@ export default function Home() {
 
           <Container py="5%" px={0} size="xl">
             <Title order={2} align="center" mb="3rem">
-              My Areas Of Interest
+              Things I'm Passionate About
             </Title>
 
             <SimpleGrid

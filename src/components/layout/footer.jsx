@@ -194,7 +194,7 @@ export function Footer() {
                         </Link>
 
                         <Text size="md" color="dimmed" className={classes.description}>
-                            Life | Love | Impact <br />
+                            Life | Loyalty | Impact <br />
                             Living, learning, & leveling up one day at a time.
                         </Text>
                     </div>
