@@ -1,5 +1,5 @@
-import { Navigation } from "./navigation"
-import { Footer } from "./footer"
+import { Navigation } from "./Navigation"
+import { Footer } from "./Footer"
 import { createStyles } from "@mantine/core";
 // import { Sidebar } from "./SideMenu";
 

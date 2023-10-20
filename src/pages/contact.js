@@ -6,7 +6,7 @@ import { IconBrandWhatsapp, IconMapPin, IconPhoneCall, IconMail } from '@tabler/
 import { FloatingLabelInput, FloatingLabelTextarea } from "../components/forms/FloatingLabelInputs";
 import { useForm } from "@mantine/form";
 import { useState } from "react";
-import { SEOHead } from "../components/Layout/SEOHead";
+import { SEOHead } from "../components/layout/SEOHead";
 
 const data = [
     {
@@ -161,7 +161,7 @@ export function ContactMedium({ icon: Icon, title, medium }) {
     );
 }
 
-export default function Contact({ sensors }) {
+export default function Contact() {
     const { classes } = useStyles();
     const [isSubmittingForm, setIsSubmittingForm] = useState(false);
     const [formSubmitError, setFormSubmitError] = useState(null);
