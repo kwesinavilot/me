@@ -85,7 +85,17 @@ const useStyles = createStyles((theme) => ({
         ref: getStylesRef('image'),
 
         transition: "transform 500ms ease",
-    }
+    },
+
+    middle: {
+        padding: "0 0 5%",
+        // background: "red",
+
+        [theme.fn.smallerThan('lg')]: {
+            padding: "0 5% 5%",
+            // background: "purple",
+        },
+    },
 }));
 
 const worksData = [
@@ -231,7 +241,7 @@ export default function Projects() {
                     </Text>
                 </Container>
 
-                <Container pt={0} pb="5%" px={0} size="xl">
+                <Container className={classes.middle} size="xl">
                     <SimpleGrid
                         cols={3}
                         spacing="xl"
@@ -240,7 +250,7 @@ export default function Projects() {
                             { maxWidth: 'lg', cols: 3, spacing: 'xl' },
                             { maxWidth: 'md', cols: 2, spacing: 'xl' },
                             { maxWidth: 'sm', cols: 2, spacing: 'xl' },
-                            { maxWidth: 'xs', cols: 2, spacing: 'md' },
+                            { maxWidth: 'xs', cols: 1, spacing: 'xl' },
                         ]}
                         className={classes.partiesCol}
                     >

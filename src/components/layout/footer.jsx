@@ -1,4 +1,4 @@
-import { createStyles, Text, Container, Title, ActionIcon, Group, Image, SimpleGrid } from '@mantine/core';
+import { createStyles, Text, Container, Title, ActionIcon, Group, SimpleGrid } from '@mantine/core';
 import Link from "next/link";
 import { IconMail, IconBrandLinkedin, IconBrandTwitter, IconBrandYoutube, IconBrandInstagram, IconBrandFacebook } from '@tabler/icons-react';
 
@@ -121,18 +121,6 @@ const useStyles = createStyles((theme) => ({
         },
     },
 }));
-
-const data = [
-    {
-        title: "More of Me",
-        links: [
-            { label: "About", link: "/about" },
-            { label: "Projects", link: "/projects" },
-            { label: "Skills", link: "/skills" },
-            { label: "Contact", link: "/contact" }
-        ]
-    },
-]
 
 export function Footer() {
     const { classes } = useStyles();

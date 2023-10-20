@@ -1,6 +1,7 @@
-import { createStyles, Header, Group, Burger, Container, Title } from '@mantine/core';
+import { createStyles, Title, Header, Group, Burger, Container } from '@mantine/core';
 import Link from "next/link";
-// import { Sidebar } from './SideMenu';
+import { Sidebar } from './SideMenu';
+import { useDisclosure } from '@mantine/hooks';
 
 const useStyles = createStyles((theme) => ({
     inner: {
@@ -120,7 +121,7 @@ const headerLinks = [
 ];
 
 export function Navigation() {
-    // const [opened, { open, close }] = useDisclosure(false);
+    const [opened, { open, close }] = useDisclosure(false);
     const { classes } = useStyles();
 
     const items = headerLinks.map((link) => {
@@ -137,7 +138,7 @@ export function Navigation() {
 
     return (
         <>
-            {/* <Sidebar opened={opened} close={close} /> */}
+            <Sidebar opened={opened} close={close} />
 
             <Header height={70} zIndex={1000} fixed="true" className={classes.header}>
                 <Container size="xl" fluid="true">
@@ -153,14 +154,14 @@ export function Navigation() {
                             {items}
                         </Group>
 
-                        {/* <Burger
+                        <Burger
                             opened={opened}
                             onClick={open}
                             className={classes.burger}
                             size="md"
                             title="Open navigation"
                             aria-label="Open navigation"
-                        /> */}
+                        />
                     </div>
                 </Container>
             </Header>
