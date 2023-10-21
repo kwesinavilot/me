@@ -1,4 +1,4 @@
-import { createStyles, Text, Container, Title, ActionIcon, Group, SimpleGrid } from '@mantine/core';
+import { createStyles, Text, Container, Title, ActionIcon, Group, Center } from '@mantine/core';
 import Link from "next/link";
 import { IconMail, IconBrandLinkedin, IconBrandTwitter, IconBrandYoutube, IconBrandInstagram, IconBrandFacebook } from '@tabler/icons-react';
 
@@ -27,7 +27,10 @@ const useStyles = createStyles((theme) => ({
     },
 
     logo: {
-        maxWidth: 350,
+        flexDirection: 'column',
+        alignItems: 'center',
+        margin: 'auto',
+        textAlign: "center",
 
         [theme.fn.smallerThan('sm')]: {
             display: 'flex',
@@ -50,20 +53,6 @@ const useStyles = createStyles((theme) => ({
     inner: {
         display: 'flex',
         justifyContent: 'space-between',
-    },
-
-    groups: {
-        display: 'flex',
-        flexWrap: 'wrap',
-        justifyContent: 'space-between',
-
-        [theme.fn.smallerThan('sm')]: {
-            display: 'none',
-        },
-
-        [theme.fn.smallerThan('xl')]: {
-            marginLeft: "10%",
-        },
     },
 
     wrapper: {
@@ -104,33 +93,6 @@ const useStyles = createStyles((theme) => ({
         [theme.fn.smallerThan('sm')]: {
             flexDirection: 'column',
         },
-    },
-
-    social: {
-        'button': {
-            color: theme.colors.main[9]
-        },
-
-        'button:hover': {
-            color: theme.black,
-            backgroundColor: theme.white,
-        },
-
-        [theme.fn.smallerThan('sm')]: {
-            marginTop: theme.spacing.xs,
-        },
-
-        [theme.fn.smallerThan('md')]: {
-            padding: "2%",
-        },
-    },
-
-    icons: {
-        width: 30,
-
-        [theme.fn.smallerThan('md')]: {
-            width: 50,
-        }
     },
 }));
 
@@ -184,7 +146,7 @@ export function Footer() {
             </Container>
 
             <footer className={classes.footer}>
-                <Container className={classes.inner} fluid>
+                <Center className={classes.inner} mx="auto">
                     <div className={classes.logo}>
                         <Link
                             href="/"
@@ -198,50 +160,7 @@ export function Footer() {
                             Living, learning, & leveling up one day at a time.
                         </Text>
                     </div>
-
-                    <SimpleGrid
-                        cols={3}
-                        spacing="lg"
-                        verticalSpacing="lg"
-                        breakpoints={[
-                            { maxWidth: 'lg', cols: 5, spacing: 'md' },
-                            { maxWidth: 'md', cols: 3, spacing: 'md' },
-                        ]}
-                        className={classes.groups}
-                    >
-                        <div className={classes.wrapper}>
-                            <Text className={classes.title}>More of Me</Text>
-
-                            <Link
-                                className={classes.link}
-                                href="/about"
-                            >
-                                About
-                            </Link>
-
-                            <Link
-                                className={classes.link}
-                                href="/projects"
-                            >
-                                Projects
-                            </Link>
-
-                            <Link
-                                className={classes.link}
-                                href="/skills"
-                            >
-                                Skills
-                            </Link>
-
-                            <Link
-                                className={classes.link}
-                                href="/contact"
-                            >
-                                Contact
-                            </Link>
-                        </div>
-                    </SimpleGrid>
-                </Container>
+                </Center>
 
                 <Container className={classes.afterFooter} size="xl">
                     <Text color="dimmed" size="sm">
