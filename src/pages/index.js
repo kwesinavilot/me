@@ -251,7 +251,7 @@ export default function Home() {
             </Grid.Col>
 
             <Grid.Col md={4} lg={5} p={0}>
-              <Image src="/images/headshot.png" />
+              <Image src="./images/headshot.png" />
             </Grid.Col>
           </Grid>
         </Container>

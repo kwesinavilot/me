@@ -13,13 +13,13 @@ module.exports = {
         protocol: 'http',
         hostname: 'localhost',
         port: '3000',
-        pathname: '/images/**',
+        pathname: '/',
       },
       {
         protocol: 'https',
         hostname: 'https://kwesinavilot.github.io/me/',
         port: '',
-        pathname: '/images/**',
+        pathname: '/',
       },
     ]
   }
