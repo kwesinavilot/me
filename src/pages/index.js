@@ -127,6 +127,10 @@ const useStyles = createStyles((theme) => ({
   secondCol: {
     paddingTop: 0,
     paddingButtom: 0,
+
+    [theme.fn.smallerThan('md')]: {
+      padding: "10% 0",
+    }
   },
 
   lowerContainer: {
@@ -238,7 +242,7 @@ export default function Home() {
                   className={classes.typewriter}
                 >
                   <Typewriter
-                    words={['Technopreneur', 'Software Engineer', 'Blockchain Enthusiast']}
+                    words={['Technopreneur', 'Software Engineer', "ML Engineer", 'Blockchain Enthusiast']}
                     loop={0}
                     cursor
                     cursorStyle='_'
