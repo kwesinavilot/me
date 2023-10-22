@@ -1,4 +1,4 @@
-import { createStyles, Text, Container, Title, ActionIcon, Group, Center } from '@mantine/core';
+import { createStyles, Image, Text, Container, Title, ActionIcon, Group, Center } from '@mantine/core';
 import Link from "next/link";
 import { IconMail, IconBrandLinkedin, IconBrandTwitter, IconBrandYoutube, IconBrandInstagram, IconBrandFacebook } from '@tabler/icons-react';
 
@@ -152,6 +152,8 @@ export function Footer() {
                             href="/"
                             style={{ textDecoration: 'none' }}
                         >
+                            <Image mx="auto" width={50} mb="md" src="./adinkrahene.png" alt="Andy's Logo" />
+
                             <Title order={4} color='black'>Kwesi Ankomahene</Title>
                         </Link>
 
