@@ -1,7 +1,7 @@
 import { AppProps } from 'next/app';
 import Layout from '../components/layout/Layout';
 import { MantineProvider } from '@mantine/core';
-import { RouterTransition } from "../components/Layout/RouterTransition";
+import { RouterTransition } from "../components/layout/RouterTransition";
 
 export default function App(props: AppProps) {
   const { Component, pageProps } = props;
