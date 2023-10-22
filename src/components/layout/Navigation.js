@@ -144,7 +144,7 @@ export function Navigation() {
                 <Container size="xl" fluid="true">
                     <div className={classes.inner}>
                         <Link
-                            href="/"
+                            href="./"
                             style={{ textDecoration: 'none', border: "solid 2px redirect" }}
                         >
                             <Group gap="0.8rem">
