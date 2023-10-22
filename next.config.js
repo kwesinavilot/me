@@ -13,7 +13,7 @@ module.exports = {
         protocol: 'https',
         hostname: 'kwesinavilot.github.io',
         port: '',
-        pathname: '/me/**',
+        pathname: '/**',
       },
     ]
   }
