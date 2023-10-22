@@ -10,10 +10,16 @@ module.exports = {
   images: {
     remotePatterns: [
       {
+        protocol: 'http',
+        hostname: 'localhost',
+        port: '3000',
+        pathname: '/images/**',
+      },
+      {
         protocol: 'https',
-        hostname: 'kwesinavilot.github.io',
+        hostname: 'https://kwesinavilot.github.io/me/',
         port: '',
-        pathname: '/**',
+        pathname: '/images/**',
       },
     ]
   }
