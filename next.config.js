@@ -3,7 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
 
   // Add basePath
-  // basePath: '/me',
+  basePath: '/me',
 }
 
 module.exports = {
