@@ -155,7 +155,7 @@ const interestData = [
     description:
       'I have a deep interest in backend development, where I craft the logic and functionality that powers applications.',
     image: {
-      src: "/images/backend.webp",
+      src: "./images/backend.webp",
       width: 370
     },
   },
@@ -164,7 +164,7 @@ const interestData = [
     description:
       'Data fascinates me, and I enjoy extracting insights from data to inform decisions.',
     image: {
-      src: "/images/ds-1.jpg",
+      src: "./images/ds-1.jpg",
       width: 360
     },
   },
@@ -173,7 +173,7 @@ const interestData = [
     description:
       "I'm exploring the fascinating world of Artificial Intelligence and Machine Learning to build intelligent applications.",
     image: {
-      src: "/images/ai-ml-1.jpg",
+      src: "./images/ai-ml-1.jpg",
       width: 365
     },
   },
@@ -182,7 +182,7 @@ const interestData = [
     description:
       "The potential for blockchain technology to revolutionize industries is a subject of great interest to me.",
     image: {
-      src: "/images/block-1.jpg",
+      src: "./images/block-1.jpg",
       width: 360
     },
   },
@@ -251,7 +251,7 @@ export default function Home() {
             </Grid.Col>
 
             <Grid.Col md={4} lg={5} p={0}>
-              <Image src="./images/headshot.png" />
+              <Image src="../images/headshot.png" />
             </Grid.Col>
           </Grid>
         </Container>

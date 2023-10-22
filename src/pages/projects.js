@@ -104,7 +104,7 @@ const worksData = [
         description:
             "The Breathe Accra Project uses cutting-edge air quality monitoring sensors to provide open access to hyperlocal air quality data in the Greater Accra Metropolitan Area. We track air pollution levels and recommend interventions.",
         image: {
-            src: "/images/breatheaccra.png",
+            src: "./images/breatheaccra.png",
             width: 425
         },
         link: "https://breatheaccra.org/",
@@ -114,7 +114,7 @@ const worksData = [
         description:
             'The UTAG-UCC Welfare Portal digitizes and streamlines the process that association members use to request for their membership benefits and provides executives with an easy means to process requests, generate reports and audit their finances.',
         image: {
-            src: "/images/utagucc.png",
+            src: "./images/utagucc.png",
             width: 425
         },
         link: "https://utagucc.com/",
@@ -124,7 +124,7 @@ const worksData = [
         description:
             "Towncraft optimizes district-level infrastructure development using 2021 censud data. It assesses population density, service accessibility, and identifies critical infrastructure needs, aiding local governments in informed decision-making.",
         image: {
-            src: "/images/towncraft.png",
+            src: "./images/towncraft.png",
             width: 365
         },
         link: "https://github.com/kwesinavilot/towncraft",
@@ -134,7 +134,7 @@ const worksData = [
         description:
             "Dwadipa was originally an ecommerce platform in the University of Cape Coast. We pivoted to create a B2C and B2B marketplace where vendors can sell to students directly.",
         image: {
-            src: "/images/dwadipa1.png",
+            src: "./images/dwadipa1.png",
             width: 420
         },
         link: "#",
@@ -144,7 +144,7 @@ const worksData = [
         description:
             "Bascidol uses machine learning to assist medical officers in determining the acidity levels of a COPD patient's blood and to determine if they have Acid-Base Disorder. Bascidol's speed and accuracy helps doctors to know how best to treat COPD patients.",
         image: {
-            src: "/images/bascidol.png",
+            src: "./images/bascidol.png",
             width: 420
         },
         link: "#",
@@ -154,7 +154,7 @@ const worksData = [
         description:
             "This is the Control Panel and the API for the VOTEC Restaurant mobile app. This part of the infrastructure handles inventory, menus, orders, reports and deliveries. A section of it handles API requests from the mobile and reconciles.",
         image: {
-            src: "/images/votec.png",
+            src: "./images/votec.png",
             width: 420
         },
         link: "#",
@@ -164,7 +164,7 @@ const worksData = [
         description:
             "ServicesKeep is a simple but secured way to store your passwords, bank accounts, identity cards, personal notes and other important details with little stress and no fear. It uses industry-grade cryptography algorithms to protect data both at rest and in transit.",
         image: {
-            src: "/images/votec.png",
+            src: "./images/votec.png",
             width: 420
         },
         link: "#",
@@ -174,7 +174,7 @@ const worksData = [
         description:
             "This is a PHP and Laravel package is for sending SMS notifications programmatically through the mNotify platform. It has inbuilt support for queues and message scheduling. It also provides a view that can be used by developers to track their mNotify account.",
         image: {
-            src: "/images/tidings.png",
+            src: "./images/tidings.png",
             width: 420
         },
         link: "https://packagist.org/packages/naviware/tidings",
@@ -184,7 +184,7 @@ const worksData = [
         description:
             "Dr. Angela Dziedzom Akorsu is a Senior Research Fellow and the Head of Department at the Department of Labour and Human Resource Studies , School for Development Studies at the University of Cape Coast. I built her website.",
         image: {
-            src: "/images/akorsu.png",
+            src: "./images/akorsu.png",
             width: 420
         },
         link: "https://angelaakorsu.onrender.com/",

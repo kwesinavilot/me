@@ -309,7 +309,7 @@ export default function Projects() {
 
                             {/* <Grid.Col order={2} xl={3} md={4} sm={5}>
                             <Image
-                                src="/images/parties/individual.svg"
+                                src="./images/parties/individual.svg"
                                 width={225}
                                 alt="individuals"
                                 className={classes.entitiesIcons}
