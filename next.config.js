@@ -3,7 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
 
   // Add basePath
-  basePath: '/me',
+  basePath: '',
 }
 
 module.exports = {
@@ -17,7 +17,7 @@ module.exports = {
       },
       {
         protocol: 'https',
-        hostname: 'https://kwesinavilot.github.io/me/',
+        hostname: 'https://kwesinavilot.github.io/',
         port: '',
         pathname: '/',
       },
