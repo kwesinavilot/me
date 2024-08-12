@@ -1,6 +1,6 @@
 import { createStyles, Avatar, Title, Header, Group, Burger, Container } from '@mantine/core';
 import Link from "next/link";
-import { Sidebar } from './me/SideMenu';
+import { Sidebar } from './SideMenu';
 import { useDisclosure } from '@mantine/hooks';
 
 const useStyles = createStyles((theme) => ({
