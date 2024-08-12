@@ -149,7 +149,7 @@ export function Footer() {
                 <Center className={classes.inner} mx="auto">
                     <div className={classes.logo}>
                         <Link
-                            href="/"
+                            href="/me/"
                             style={{ textDecoration: 'none' }}
                         >
                             <Image mx="auto" width={50} mb="md" src="./adinkrahene.png" alt="Andy's Logo" />
@@ -166,7 +166,7 @@ export function Footer() {
 
                 <Container className={classes.afterFooter} size="xl">
                     <Text color="dimmed" size="sm">
-                        © 2023 All rights reserved.
+                        © 2023 - {new Date().getFullYear()} All rights reserved.
                     </Text>
 
                     <Text color="dimmed" size="sm" fw="bold">

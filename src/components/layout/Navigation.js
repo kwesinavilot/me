@@ -144,11 +144,11 @@ export function Navigation() {
                 <Container size="xl" fluid="true">
                     <div className={classes.inner}>
                         <Link
-                            href="./me/"
+                            href="/me/"
                             style={{ textDecoration: 'none', border: "solid 2px redirect" }}
                         >
                             <Group gap="0.8rem">
-                                <Avatar size={30} src="./me/adinkrahene.png"  alt="Andy's Logo" />
+                                <Avatar size={30} src="./adinkrahene.png"  alt="Andy's Logo" />
 
                                 <Title order={4} color='black'>Kwesi Ankomahene</Title>
                             </Group>
