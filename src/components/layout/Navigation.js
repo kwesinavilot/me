@@ -1,6 +1,6 @@
 import { createStyles, Avatar, Title, Header, Group, Burger, Container } from '@mantine/core';
 import Link from "next/link";
-import { Sidebar } from './SideMenu';
+import { Sidebar } from './me/SideMenu';
 import { useDisclosure } from '@mantine/hooks';
 
 const useStyles = createStyles((theme) => ({
@@ -99,23 +99,23 @@ const useStyles = createStyles((theme) => ({
 
 const headerLinks = [
     {
-        link: './',
+        link: './me/',
         label: 'Home',
     },
     {
-        link: './about',
+        link: './me/about',
         label: 'About',
     },
     {
-        link: './projects',
+        link: './me/projects',
         label: 'Projects',
     },
     {
-        link: './skills',
+        link: './me/skills',
         label: 'Skills',
     },
     {
-        link: './contact',
+        link: './me/contact',
         label: 'Contact',
     },
 ];
@@ -144,11 +144,11 @@ export function Navigation() {
                 <Container size="xl" fluid="true">
                     <div className={classes.inner}>
                         <Link
-                            href="./"
+                            href="./me/"
                             style={{ textDecoration: 'none', border: "solid 2px redirect" }}
                         >
                             <Group gap="0.8rem">
-                                <Avatar size={30} src="./adinkrahene.png"  alt="Andy's Logo" />
+                                <Avatar size={30} src="./me/adinkrahene.png"  alt="Andy's Logo" />
 
                                 <Title order={4} color='black'>Kwesi Ankomahene</Title>
                             </Group>
