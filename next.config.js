@@ -14,7 +14,7 @@ module.exports = {
       },
       {
         protocol: 'https',
-        hostname: 'https://kwesinavilot.github.io/me/',
+        hostname: 'https://kwesinavilot.github.io/',
         port: '',
         pathname: '/',
       },

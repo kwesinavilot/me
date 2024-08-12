@@ -13,7 +13,7 @@ export function SEOHead ({ title, description, keywords }) {
             <meta property="og:title" content={`${title} | Andrews Kwesi Ankomahene`} />
             <meta property="og:description" content={description} />
             <meta property="og:type" content="website" />
-            <meta property="og:url" content="https://kwesinavilot.github.io/me/about" />
+            <meta property="og:url" content="https://kwesinavilot.github.io/about" />
             <meta property="og:image" content="./adinkrahene.png" />
             <meta property="og:image:alt" content="Andy's Logo" />
             <meta name="twitter:card" content="summary_large_image" />
