@@ -52,7 +52,7 @@ const useStyles = createStyles((theme) => ({
     },
 
     light: {
-        color: theme.colors.main[5],
+        color: "darkkhaki",
         fontSize: 35,
         fontWeight: 500,
         textAlign: "center",
@@ -109,10 +109,12 @@ const experienceList = [
         duration: "January 2023 - Present",
         location: "Ghana",
         description: [
-            "Developed and maintained the Breathe Accra website and panel.",
+            "Developed and maintaining the Breathe Accra and GhanaAQ websites",
+            "Developed and maintaining the Breathe Accra Panel",
+            "Building the GhanaAQ API and mobile app",
             "Set up the project's server infrastructure.",
-            "Integrated Clarity, Airnote and Airqo sensors and APIs into Breathe Accra's platforms.",
-            "Integrated the Breathe Accra platforms with Google Maps and Google Cloud."
+            "Integrated Clarity, Airnote and Airqo sensors and APIs into Breathe Accra and GhanaAQ's platforms.",
+            "Integrated the Breathe Accra and GhanaAQ platforms with Google Maps and Google Cloud."
         ]
     },
     {
@@ -211,9 +213,9 @@ const educationList = [
         location: "Cape Coast, Ghana",
         description: [
             "Computational Theory & Formal Languages",
-            "Advancec Statistics",
+            "Advanced Statistics",
             "Distributed Systems",
-            "Articial Intelligence",
+            "Artificial Intelligence",
             "Data Science"
         ]
     },
@@ -223,13 +225,30 @@ const educationList = [
         duration: "August 2014 - July 2020",
         location: "Cape Coast, Ghana",
         description: [
-            "Developed and maintained the Breathe Accra website and panel.",
-            "Set up the project's server infrastructure.",
-            "Integrated Clarity, Airnote and Airqo sensors and APIs into Breathe Accra's platforms.",
-            "Integrated the Breathe Accra platforms with Google Maps and Google Cloud."
+            "Forecasting Methods",
+            "Data Structures & Algorithms",
+            "Software Engineering",
+            "Project Management",
+            "Databases & Database Management"
         ]
     },
 ];
+
+const certificationList = [
+    {
+        title: "Software Entrepreneurship",
+        organization: "MEST Africa",
+        duration: "September, 2023 - August, 2024",
+        location: "Accra, Ghana",
+        description: [
+            "Business Growth & Strategy",
+            "Communication",
+            "Software Development",
+            "Mobile Development",
+            "Sales & Marketing",
+        ]
+    },
+]
 
 export function Experience({ title, organization, duration, location, description }) {
     return (
@@ -264,6 +283,7 @@ export default function Projects() {
 
     const experiences = experienceList.map((experience, index) => <Experience {...experience} key={index} />);
     const education = educationList.map((education, index) => <Experience {...education} key={index} />);
+    const certifications = certificationList.map((certification, index) => <Experience {...certification} key={index} />);
 
     return (
         <>
@@ -277,7 +297,11 @@ export default function Projects() {
                 <Container size="lg" data-purpose="page-header" className={classes.topLevel}>
                     <Title order={3} className={classes.title}>About Me</Title>
 
-                    <Text className={classes.light}>
+                    <Text
+                        className={classes.light}
+                        variant="gradient"
+                        gradient={{ from: 'indigo', to: 'cyan', deg: 45 }}
+                    >
                         Here is more information about me
                     </Text>
                 </Container>
@@ -286,7 +310,7 @@ export default function Projects() {
                     <Container pt={0} pb="3%" px={0} size="xl">
                         <Grid gutterSm="lg" gutterXs="md" gutterMd="xl" gutterLg={50} grow>
                             <Grid.Col order={1} xl={9} md={8} sm={7}>
-                                <Title order={2} className={classes.entitiesTitle}>Something Small About Myself</Title>
+                                <Title order={2} className={classes.entitiesTitle}>About Myself</Title>
 
                                 <Text size="md" mt="md">
                                     You know, sometimes it is hard to introduce yourself because you know yourself so well that
@@ -335,6 +359,16 @@ export default function Projects() {
 
                         <Stack justify="flex-start" mb="xl" spacing="2rem">
                             {education}
+                        </Stack>
+                    </Container>
+
+                    <Container pt={0} pb="3%" px={0} size="xl">
+                        <Title order={2} mb="lg">
+                            My Certifications
+                        </Title>
+
+                        <Stack justify="flex-start" mb="xl" spacing="2rem">
+                            {certifications}
                         </Stack>
                     </Container>
                 </Container>

@@ -69,7 +69,13 @@ const useStyles = createStyles((theme) => ({
 export function Skill({ icon: Icon, title, description }) {
     return (
         <Stack align="center">
-            <ThemeIcon size={50} color="main.2" radius={40}>
+            <ThemeIcon
+                size={50}
+                color="main.2"
+                radius={40}
+                variant="gradient"
+                gradient={{ from: 'indigo', to: 'cyan', deg: 45 }}
+            >
                 <Icon size="1.5rem" stroke={1.5} />
             </ThemeIcon>
 
@@ -126,31 +132,31 @@ const softSkillsData = [
 const languagesData = [
     {
         icon: IconBrandPhp,
-        title: 'PHP (7 years)',
+        title: 'PHP (8 years)',
         description:
-            "With 7 years of experience in PHP, I've honed my skills in server-side scripting, making me proficient in web development.",
+            "With 8 years of experience in PHP, I've honed my skills in server-side scripting, making me proficient in web development.",
     },
     {
         icon: IconBrandJavascript,
-        title: 'JavaScript (6 years)',
+        title: 'JavaScript (7 years)',
         description:
-            'Having worked with JavaScript for 6 years, I can confidently say I excel in building interactive and responsive web applications.',
+            'Having worked with JavaScript for 7 years, I can confidently say I excel in building interactive and responsive web applications.',
     },
     {
         icon: IconBrandPython,
-        title: 'Python (4 years)',
+        title: 'Python (5 years)',
         description:
             'My proficiency in Python empowers me to work on data analysis, create predictive models, and develop data-driven solutions.',
     },
     {
         icon: IconCoffee,
-        title: 'Java (4 years)',
+        title: 'Java (5 years)',
         description:
             'My Java skills enable me to contribute to a variety of projects and collaborate with teams developing different types of software.',
     },
     {
         icon: IconBrandHtml5,
-        title: 'HTML + CSS (6 years)',
+        title: 'HTML + CSS (7 years)',
         description:
             "I've mastered HTML and CSS, enabling me to craft well-structured web pages and create visually appealing designs, ensuring a top-notch user experience.",
     },
@@ -158,101 +164,101 @@ const languagesData = [
         icon: IconBrandGolang,
         title: 'Golang (1 year - Still learning)',
         description:
-            "Although still in the learning phase, I'm gearing up to work on blockchains, cloud computing, microservices, and scalable application development."
+            "Although still in the learning phase, I'm gearing up to work on blockchains, low-level cloud computing, microservices, and scalable application development."
     }
 ];
 
 const databaseData = [
     {
         icon: IconBrandMysql,
-        title: 'MySQL (7 years)',
+        title: 'MySQL (8 years)',
         description:
-            "With 7 years of experience in PHP, I've honed my skills in server-side scripting, making me proficient in web development.",
+            "Leveraged MySQL in various backend projects, enhancing my ability to design and maintain robust databases for scalable applications.",
     },
     {
         icon: IconFeather,
-        title: 'SQLite (4 years)',
+        title: 'SQLite (5 years)',
         description:
-            'Having worked with JavaScript for 6 years, I can confidently say I excel in building interactive and responsive web applications.',
+            'Utilized SQLite in lightweight applications, allowing for efficient storage management in projects with mobile and embedded system constraints.',
     },
     {
         icon: IconDog,
-        title: 'PostgreSQL (3 years)',
+        title: 'PostgreSQL (4 years)',
         description:
-            'My proficiency in Python empowers me to work on data analysis, create predictive models, and develop data-driven solutions.',
+            'Gained experience with PostgreSQL through complex data integration tasks, optimizing performance in enterprise-level applications.',
     },
     {
         icon: IconServer2,
-        title: 'MS SQL Server (2 years)',
+        title: 'MS SQL Server (3 years)',
         description:
-            'My Java skills enable me to contribute to a variety of projects and collaborate with teams developing different types of software.',
+            'Worked with MS SQL Server on business intelligence solutions, contributing to effective data analysis and reporting systems.',
     },
     {
         icon: IconBrandMongodb,
-        title: 'MongoDB (1 year - Still learning)',
+        title: 'MongoDB (3 years)',
         description:
-            "I've mastered HTML and CSS, enabling me to craft well-structured web pages and create visually appealing designs, ensuring a top-notch user experience.",
+            "Applied MongoDB in projects requiring flexible, schema-less data structures, facilitating rapid development of dynamic applications. Used it also in AI/ML applications.",
     }
 ];
 
 const framriesData = [
     {
         icon: IconBrandLaravel,
-        title: 'Laravel (5 years)',
+        title: 'Laravel (6 years)',
         description:
             "Laravel's elegant syntax and rich ecosystem make it a go-to choice to build robust and scalable web applications efficiently and quickly, especially when clients demand it.",
     },
     {
         icon: IconBrandNodejs,
-        title: 'Node.js (4 years)',
+        title: 'Node.js (5 years)',
         description:
-            "My 4 years of experience with Node.js allow me to build server-side applications using JavaScript, beneficial for scalable and real-time applications.",
+            "My 5 years of experience with Node.js allow me to build server-side applications using JavaScript, beneficial for scalable and real-time applications.",
     },
     {
         icon: IconBrandDjango,
-        title: 'Django (3 years - still learning)',
+        title: 'Django (5 years)',
         description:
-            "Having gained just the foundation, Django's 'batteries-included' approach and strong security features make it a valuable addition to my skill set.",
+            "Developed and maintained scalable web applications using Django's comprehensive toolkit, focusing on security and rapid development, making it a key framework in my arsenal.",
     },
     {
         icon: IconBrandNextjs,
-        title: 'NextJS (3 years)',
+        title: 'NextJS (5 years)',
         description:
-            'I excel in creating fast and SEO-friendly, modern, server-rendered React applications.',
+            "Specialized in building high-performance, SEO-friendly React applications with server-side rendering, enhancing user experience and search engine visibility.",
     },
     {
         icon: IconBrandReact,
-        title: 'React (4 years)',
+        title: 'React (6 years)',
         description:
-            'I have honed my ability to develop interactive and user-friendly user interfaces for creating dynamic web applications.',
+            'Mastered the creation of dynamic and interactive user interfaces, utilizing React to build responsive and robust web applications.',
     },
     {
         icon: IconBrandPrisma,
-        title: 'Prisma (3 years)',
+        title: 'Prisma (4 years)',
         description:
-            'I can efficiently interact with databases using an intuitive and type-safe ORM.',
+            'Efficiently interacted with databases through Prisma, leveraging its intuitive and type-safe ORM to streamline backend development.',
     },
     {
         icon: IconBrandVue,
-        title: 'Vue (3 years)',
+        title: 'Vue (2 years)',
         description:
             "Vue's simplicity and flexibility enable me to build interactive web applications with ease.",
     },
     {
         icon: IconBrandMantine,
-        title: 'Mantine (4 years)',
+        title: 'Mantine (5 years)',
         description:
             "With Mantine, I can expedite the development of highly functional and visually appealing user interfaces by utilizing its pre-built, customizable components.",
     },
     {
         icon: IconBrandTailwind,
-        title: 'TailwindCSS (4 years)',
+        title: 'TailwindCSS (5 years)',
         description:
             "I'm skilled at using utility-first CSS frameworks to style web applications efficiently, streamlining the design process and enhancing development productivity.",
     },
     {
         icon: IconBrandBootstrap,
-        title: 'Bootstrap (4 years)',
+        title: 'Bootstrap (6 years)',
         description:
             "I've worked with Bootstrap to create responsive, mobile-first web designs, delivering deliver consistent and visually appealing interfaces.",
     }
@@ -261,61 +267,61 @@ const framriesData = [
 const devToolsData = [
     {
         icon: IconBrandUbuntu,
-        title: 'Linux (6 years)',
+        title: 'Linux (7 years)',
         description:
             "My proficiency in Linux, both as a development environment and for hosting, offers several advantages in the software engineering and deployment process.",
     },
     {
         icon: IconJetpack,
-        title: 'JetBrains IDEs (7 years)',
+        title: 'JetBrains IDEs (8 years)',
         description:
-            "With 7 years of experience using JetBrains IDEs, I've honed my coding skills and productivity by leveraging their powerful features for coding, debugging, and version control.",
+            "With 8 years of experience using JetBrains IDEs, I've honed my coding skills and productivity by leveraging their powerful features for coding, debugging, and version control.",
     },
     {
         icon: IconBrandVscode,
-        title: 'VS Code (5 years)',
+        title: 'VS Code (6 years)',
         description:
             "VS Code's versatility, extensibility, and rich ecosystem of extensions enhance my coding efficiency and enable me to work on various programming languages.",
     },
     {
         icon: IconBrandGit,
-        title: 'Git (5 years)',
+        title: 'Git (6 years)',
         description:
             "My proficiency in Git helps me manage and track changes in code, collaborate with teams, and ensure version control for software projects.",
     },
     {
         icon: IconBrandGithub,
-        title: 'GitHub (5 years)',
+        title: 'GitHub (6 years)',
         description:
             'I am experienced at code sharing and contributing to open-source projects and collaborate with other developers worldwide.',
     },
     {
         icon: IconBrandGoogleMaps,
-        title: 'Google Maps (3 years)',
+        title: 'Google Maps (5 years)',
         description:
             "Leveraging Google Maps, I've integrated location-based services into applications, enhancing user experiences by providing geospatial data and mapping capabilities.",
     },
     {
         icon: IconBrandDocker,
-        title: 'Docker (2 years)',
+        title: 'Docker (3 years)',
         description:
             "I've used Docker for containerization, which ensures consistent and efficient deployment of applications across different environments.",
     },
     {
         icon: IconCloudComputing,
-        title: 'Google Cloud (3 years)',
+        title: 'Google Cloud (4 years)',
         description:
-            "GCP's cloud services and infrastructure enable me to develop, deploy, and scale applications with ease.",
+            "Leveraged Google Cloud's robust services and infrastructure to develop, deploy, and scale applications efficiently, ensuring optimal performance and reliability.",
     },
     {
         icon: IconBrandAzure,
-        title: 'Microsoft Azure (2 years)',
+        title: 'Microsoft Azure (4 years)',
         description:
-            "Although not experienced, I'm able to develop and deploy applications in a secure and scalable environment using Azure",
+            "Utilized Azure's secure and scalable environment to develop and deploy AI/ML and critical applications, enhancing cloud-based solutions with Microsoft's cloud platform.",
     },
     {
         icon: IconBrandAws,
-        title: 'AWS (2 years)',
+        title: 'AWS (3 years)',
         description:
             "I can leverage the scalability, reliability, and security for cloud-based projects that AWS provides to deploy and scale various applications.",
     },
@@ -343,7 +349,11 @@ export default function Skills() {
                 <Container size="lg" data-purpose="page-header" className={classes.topLevel}>
                     <Title order={3} className={classes.title}>My Skillset</Title>
 
-                    <Text className={classes.light}>
+                    <Text
+                        className={classes.light}
+                        variant="gradient"
+                        gradient={{ from: 'indigo', to: 'cyan', deg: 45 }}
+                    >
                         Here are the skills and tools I have in my toolbox
                     </Text>
                 </Container>

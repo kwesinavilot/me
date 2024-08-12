@@ -236,7 +236,11 @@ export default function Projects() {
                 <Container size="lg" data-purpose="page-header" className={classes.topLevel}>
                     <Title order={3} className={classes.title}>My Works</Title>
 
-                    <Text className={classes.light}>
+                    <Text
+                        className={classes.light}
+                        variant="gradient"
+                        gradient={{ from: 'indigo', to: 'cyan', deg: 45 }}
+                    >
                         Here are a few remarkable projects I have worked on
                     </Text>
                 </Container>

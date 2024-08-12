@@ -126,7 +126,7 @@ const useStyles = createStyles((theme) => (
             [theme.fn.smallerThan('xs')]: {
                 height: '55vh',
             },
-    
+
             [theme.fn.largerThan('xs')]: {
                 height: '55vh',
             },
@@ -145,7 +145,13 @@ export function ContactMedium({ icon: Icon, title, medium }) {
                 direction="row"
                 className={classes.points}
             >
-                <ThemeIcon size={50} radius={40} color="main.5">
+                <ThemeIcon
+                    size={50}
+                    radius={40}
+                    color="main.5"
+                    variant="gradient"
+                    gradient={{ from: 'indigo', to: 'cyan', deg: 45 }}
+                >
                     <Icon size="1.5rem" stroke={1.5} />
                 </ThemeIcon>
 
@@ -225,7 +231,11 @@ export default function Contact() {
                 <Container size="lg" data-purpose="page-header" className={classes.topLevel}>
                     <Title order={3} className={classes.title}>Contact Me</Title>
 
-                    <Text className={classes.light}>
+                    <Text
+                        className={classes.light}
+                        variant="gradient"
+                        gradient={{ from: 'indigo', to: 'cyan', deg: 45 }}
+                    >
                         Got a question or proposal, or just want to say hello?
                     </Text>
                 </Container>
@@ -332,7 +342,13 @@ export default function Contact() {
                                 />
 
                                 <Group position="center" mt="xl">
-                                    <Button type="submit" size="md" className={classes.learnMoreButton}>
+                                    <Button
+                                        type="submit"
+                                        size="md"
+                                        className={classes.learnMoreButton}
+                                        variant="gradient"
+                                        gradient={{ from: 'indigo', to: 'cyan', deg: 45 }}
+                                    >
                                         Send Message
                                     </Button>
                                 </Group>
